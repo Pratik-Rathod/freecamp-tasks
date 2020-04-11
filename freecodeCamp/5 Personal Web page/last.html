@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pratik Rathod</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(-90deg, rgb(175, 184, 206), rgb(66, 134, 244));
+        }
+
+        #welcome-section {
+            position: relative;
+            text-align: center;
+            color: white;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            min-height: 300px;
+            width: 100%;
+            bottom: 40vh;
+            background: linear-gradient(45deg, rgb(127, 127, 213, .6), rgb(134, 168, 231, .6), rgb(145, 234, 228, .6)), url(background.jpg);
+            background-attachment: fixed;
+            box-shadow: inset 0px -10px 10px rgba(0, 0, 0, .4);
+            background-size: 30% cover;
+            background-repeat: no-repeat;
+            background-position: fixed;
+            animation: backgroudGrandient 12s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+        }
+
+        @keyframes backgroudGrandient {
+            0% {
+                background-position: 70% 70%;
+            }
+
+            25% {
+                background-position: 100% 50%;
+            }
+
+            50% {
+                background-position: 70% 40%;
+            }
+
+            100% {
+                background-position: 70% 70%;
+            }
+        }
+
+
+        #welcome-section h1 {
+            font-weight: 900;
+            letter-spacing: 3px;
+            font-size: 45px;
+            margin-top: 0;
+            padding-top: calc(17vw + 50px);
+        }
+
+        #welcome-section p {
+            line-height: 30px;
+            font-style: oblique;
+            font-size: 20px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            color: #070707;
+        }
+
+        nav {
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            background: transparent;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .navdown {
+            background: linear-gradient(-45deg, #7F7FD5, #86A8E7, #91EAE4);
+        }
+
+        nav ul {
+            justify-content: space-around;
+            list-style: none;
+            letter-spacing: 4px;
+            display: flex;
+        }
+
+        nav ul li a {
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        nav ul li ::after {
+            transition: .5s;
+            content: '/>';
+            color: transparent;
+        }
+
+        nav ul li ::before {
+            transition: .5s;
+            content: '< ';
+            color: transparent;
+        }
+
+        nav ul li:hover ::after {
+            color: black;
+        }
+
+        nav ul li:hover ::before {
+            color: black;
+        }
+
+        nav header p {
+            color: white;
+            letter-spacing: 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        main {
+            color: white;
+            text-align: center;
+        }
+
+        main header {
+            letter-spacing: 4px;
+            margin-top: 70px;
+        }
+
+        main header h1::after {
+            content: ' />';
+            color: wheat;
+        }
+
+        main header h1::before {
+            content: '< ';
+            color: wheat;
+        }
+
+        .underline {
+            height: 5px;
+            width: 300px;
+            background-color: white;
+            margin: 0 auto;
+        }
+
+        #projects {
+            margin-top: 71px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .project-tile {
+            text-align: center;
+            position: relative;
+            background: linear-gradient(-45deg, #7F7FD5, #86A8E7, #91EAE4);
+            border-radius: 10px;
+            background-size: cover;
+            box-shadow: 1px 9px 5px white;
+            height: 400px;
+            box-shadow: 0 4px 4px 0 rgb(97, 94, 94);
+            width: 300px;
+            margin: 20px;
+            letter-spacing: 2px;
+            padding: 0;
+            margin-top: 30px;
+            transition: .31s;
+        }
+
+        .project-tile:hover {
+            transition: .31s;
+            box-shadow: 0 4px 8px 0 rgb(109, 107, 107);
+        }
+
+        .project-det h1::before {
+            content: "< ";
+            color: transparent;
+            font-size: 20px;
+            transition: .6s;
+        }
+
+        .project-det a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .project-det h1::after {
+            content: " />";
+            color: transparent;
+            font-size: 20px;
+            transition: .6s;
+        }
+
+        .project-det:hover ::after {
+            color: tomato;
+            transition: .6s;
+        }
+
+        .project-det:hover ::before {
+            color: tomato;
+            transition: .6s;
+        }
+
+        .project-tile img {
+            margin: 0;
+            border-radius: 10px 10px 0 0;
+            height: 80%;
+            width: 100%;
+        }
+
+        #viewmore {
+            border: none;
+            padding: 10px;
+            width: 200px;
+            color: white;
+            background: linear-gradient(-45deg, #7F7FD5, #86A8E7, #91EAE4);
+            font-size: 20px;
+            border-radius: 2px;
+        }
+
+        #contect {
+            color: white;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 5px;
+            padding-top: 10px;
+            height: 200px;
+            margin-top: 60px;
+            background-color: #2196F3;
+        }
+
+        #contect h1::before {
+            content: "<";
+        }
+
+        #contect h1::after {
+            content: "/>";
+        }
+        #contect-links {
+            display: flex;
+
+            justify-content: center;
+            margin-top: 30px;
+        }
+        #contect-links a{
+            border-radius: 20px;
+            margin: 10px;
+        }
+        @media only screen and (max-width: 600px) {
+             h1{
+                 font-size: 28px;
+             }
+        }
+    </style>
+</head>
+<script>
+
+    window.onscroll = function () { nav() };
+
+    function nav() {
+        let a = document.getElementById("navbar");
+        if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+            a.className = "navdown"
+        }
+        else {
+            a.className = ""
+        }
+    }
+</script>
+
+<body>
+    <div id="welcome-section">
+        <h1>Hello World ! I am Pratik Rathod</h1>
+        <p>a developer & programmer</p>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <header>
+            <p></p>
+        </header>
+        <ul>
+            <li><a href="#welcome-section">About</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contect">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+        <header>
+            <h1>My Severals Projects</h1>
+            <div class="underline"></div>
+        </header>
+        <section id="projects">
+            <div class="project-tile">
+                <img src="Untitledsd.png" width="100%" alt="">
+                <div class="project-det">
+                    <h1><a href="https://github.com/Pratik-Rathod/Tictactoe" target="_black">AI based tictoctoe</a></h1>
+                </div>
+
+            </div>
+            <div class="project-tile">
+                <img src="Screenshot1.png" width="100%" alt="">
+                <div class="project-det">
+                    <h1><a href="https://github.com/Pratik-Rathod/ASnakeGameinPython" target="_black">Python Snake</a>
+                    </h1>
+                </div>
+
+            </div>
+            <div class="project-tile">
+                <img src="Capture.PNG" width="100%" alt="">
+                <div class="project-det">
+                    <h1><a href="https://codepen.io/pratik-rathod/full/LYVKywe" target="_black">Product page</a></h1>
+                </div>
+
+            </div>
+
+            <div class="project-tile">
+                <img src="tweb.PNG" width="100%" alt="">
+                <div class="project-det">
+                    <h1><a href="https://codepen.io/pratik-rathod/full/ExjOvwo" target="_black">Trabute page</a></h1>
+                </div>
+
+            </div>
+            <div class="project-tile">
+                <img src="doc.PNG" width="100%" alt="">
+                <div class="project-det">
+                    <h1><a href="https://codepen.io/pratik-rathod/full/OJyJbrx" target="_black">JavaFX Doc</a></h1>
+                </div>
+            </div>
+        </section>
+        <a href="https://codepen.io/pratik-rathod/pens/public" target="_blank"><button id="viewmore">View
+                More</button></a>
+
+    </main>
+    <!-- page footer -->
+    <footer id="contect">
+        <h1>Pratik Rathod</h1>
+        <p>Let's make internet more better place</p>
+        <div id="contect-links">
+            <a href="https://github.com/pratik-Rathod/" target="_blank" id="profile-link">
+                <img src="1051326.svg" height="35px" alt="">
+            </a>
+            <a href="https://www.instagram.com/__pratikrathod/" target="_blank">
+                <img src="1384047.svg" height="35px" alt="">
+            </a>
+
+            <a href="mailto:pratikrathodc@gmail.com" target="_blank">
+                <img src="561188.svg" height="35px" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>

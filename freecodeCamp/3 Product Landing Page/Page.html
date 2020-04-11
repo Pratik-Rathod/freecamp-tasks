@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+        body,
+        html {
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+            margin: 0;
+
+        }
+
+        body::before {
+            content: '';
+            background: url('dark.jpg');
+            filter: brightness(60%);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            right: 0;
+            z-index: -1;
+            left: 0;
+        }
+
+        nav ul {
+            justify-content: space-around;
+            list-style: none;
+            letter-spacing: 5px;
+            line-height: 20px;
+            display: flex;
+        }
+
+        nav ul li {
+            font-size: small;
+            width: 110px;
+            font-weight: 400;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            color: wheat;
+            text-decoration: line-through;
+        }
+
+        
+        img {
+            margin: 10px;
+        }
+
+        header {
+            height: 100%;
+            width: 100%;
+        }
+
+        nav {
+            position: fixed;
+            color: white;
+            background-color: rgba(35, 36, 37, 0.4);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        #welcome-title {
+            color: white;
+            position: absolute;
+            bottom: 20%;
+            left: 40px;
+            font-style: italic;
+        }
+
+        #video {
+            border-radius: 10px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+            height: 40vw;
+            width: 80%;
+        }
+
+        #arrivals {
+            text-align: center;
+            width: 100%;
+        }
+
+        #arrivals h1,
+        #arrivals p {
+            letter-spacing: 5px;
+            background-color: rgba(35, 36, 37, 0.2);
+        }
+
+        #arrivals form {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #arrivals form input {
+            margin-top: 30px;
+            border: none;
+
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            outline: 0;
+            text-align: center;
+            height: 30px;
+            border-radius: 10px;
+            width: 30%;
+            min-width: 300px;
+        }
+
+        #product {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        #product-title{
+            margin: 60px 0 10px 30px;
+            letter-spacing: 4px;
+        }
+        .product-item {
+            position: relative;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 1px 9px 5px white;
+            height: 400px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 10px;
+            padding: 0;
+            margin-top: 30px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-item h3 {
+            letter-spacing: 3px;
+           
+            text-align: center;
+        }
+
+        .product-item div{
+            position: absolute;
+            width: 100%;
+            margin: 0 10px 0 10px;  
+            bottom: 0;
+        }
+        .product-item div button{
+            width: 80%;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            height: 40px;
+            color: white;
+            font-weight: 600;
+            background: rgba(5, 0, 0,.4);
+            margin-top: 20px;
+        }
+        .product-item:hover {
+            
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        #product-item-1 {
+            background: linear-gradient(45deg, rgb(185, 43, 39, .7), rgba(21, 101, 192, .5)),
+                url(poster-1.jpg);
+            background-size: cover;
+
+        }
+
+        #product-item-2 {
+            background: linear-gradient(45deg, rgb(170, 75, 107, .9), rgb(107, 107, 131, .7), rgb(59, 141, 153, .7)),
+                url(poster-2.jpg);
+
+            background-size: cover;
+        }
+
+        #product-item-3 {
+            background: linear-gradient(45deg, rgb(195, 20, 50, .8), rgb(36, 11, 54, .7)),
+                url(poste-3r.jpg);
+            background-size: cover;
+        }
+        footer{
+            text-align: center;
+            color: white;
+            height: 30px;
+            background: rgb(41, 41, 41);
+        }
+        @media only screen and (max-width: 600px) {
+             h1{
+                 font-size: 28px;
+             }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <div>
+                <img id="header-img" height="30px" width="30px" style="filter: invert(100%);"
+                    src="https://pluspng.com/img-png/avengers-logo-png-avengers-logo-png-1376.png" alt="No Logo Today">
+            </div>
+            <ul>
+                <li><a class="nav-link" href="#header">Home</a></li>
+                <li><a class="nav-link" href="#arrivals">Arrivals</a></li>
+                <li><a class="nav-link" href="#product">collection</a></li>
+            </ul>
+        </nav>
+        <h1 id="welcome-title">Watch out ! avengers are comming. . .</h1>
+    </header>
+    <main>
+        <section id="arrivals">
+            <h1>New Arrivals</h1>
+            <p>Marvel creations for Younger Genrations</p>
+            <iframe id="video" width="853" height="480" src="https://www.youtube.com/embed/RxAtuMu_ph4" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
+                <br>
+                <label for="email">avengers wants your email !</label>
+                <br>
+                <input name="email" id="email" placeholder="example@marvel.com" type="email" required>
+                <br>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </section>
+
+        <h1 id="product-title">Watch our awesome collection</h1>
+        <section id="product">
+            <div class="product-item" id="product-item-1">
+                <h3>Avengers endgame</h2>
+                    <div>
+                        Rattings
+                        <ul>
+                            <li>IMDB : 8.4/10</li>
+                            <li>Toteto : 94%</li>
+                            <a href="https://www.youtube.com/watch?v=X7G1soqzaRA" target="_blank"><button>Buy</button></a>
+                        </ul>
+                    </div>
+            </div>
+            <div class="product-item" id="product-item-2">
+                <h3>Spider-man far from home</h2>
+                    <div>
+                        Rattings
+                        <ul>
+                            <li>IMDB : 7.5/10</li>
+                            <li>Toteto : 91%</li>
+                            <a href="https://www.youtube.com/watch?v=8kw85J1wc1U" target="_blank"><button>Buy</button></a>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="product-item" id="product-item-3">
+                <h3>Avengers infinty war</h2>
+                    <div>
+                        Rattings
+                        <ul>
+                            <li>IMDB : 8.5</li>
+                            <li>Toteto : 85%</li>
+                            <a href="https://www.youtube.com/watch?v=X7G1soqzaRA" target="_blank"><button>Buy</button></a>
+                        </ul>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>Made with <span style="color: red;">&hearts;</span> by pratik rathod</p>
+    </footer>
+</body>
+ <script src="  https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
+
+</html>

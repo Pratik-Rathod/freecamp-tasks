@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A Document</title>
+    <!-- Style CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        html,
+        body {
+            text-justify: newspaper;
+            font-family: 'Open Sans', sans-serif;
+            height: 100%;
+            scroll-behavior: smooth;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #nav {
+            overflow-y: auto;
+            background-color: #070707;
+            color: white;
+            position: fixed;
+            text-align: center;
+            min-width: 270px;
+            box-shadow: 10px 0px 10px grey;
+            height: 100vh;
+        }
+
+        #nav nav ul {
+            padding: 0;
+        }
+
+        #nav nav ul li {
+            transition: .5s;
+            border-bottom: 1px solid;
+            list-style: none;
+            display: block;
+            padding: 5px;
+            line-height: 33px;
+        }
+
+        #nav nav ul li:hover {
+            border-radius: 20px;
+        }
+
+        header h1 {
+            letter-spacing: 1px;
+            font-size: 30px;
+            margin: 30px;
+        }
+
+        #nav nav ul li a {
+            color: white;
+            text-decoration: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        #main-doc {
+            position: absolute;
+            margin-left: 290px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        article {
+            padding-left: 80px;
+        }
+
+        article ul {
+            padding: 0px;
+        }
+
+        p span {
+            font-weight: 900;
+        }
+
+        @media only screen and (max-width: 768px) {
+            #main-doc{
+                margin-left: 0;
+                margin-top: 130px;
+            }
+            #nav{
+                position: absolute;
+                overflow-y: auto;
+                width: 100%;
+                height:120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <nav id="navbar">
+            <header><h2>JavaFX</h2></header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#History_of_JavaFX" class="nav-link">History of JavaFX</a></li>
+                <li><a href="#Key_features_of_JavaFX" class="nav-link">Key features of JavaFX</a></li>
+                <li><a href="#Program_Structre" class="nav-link">Program Structre</a></li>
+                <li><a href="#Write_your_first_program" class="nav-link">Write your first program</a></li>
+            </ul>
+
+        </nav>
+    </div>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+                <h1>Introduction</h1>
+            </header>
+            <article>
+                <ul>
+                    <li>
+                        <p>
+                            JavaFX tutorial provides basic and advanced concepts of JavaFX. Our JavaFX tutorial is
+                            designed for
+                            beginners and professionals.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            JavaFX is a Java library that is used to develop Desktop applications as well as Rich
+                            Internet
+                            Applications (RIA). The applications built in JavaFX, can run on multiple platforms
+                            including Web,
+                            Mobile and Desktops.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Our JavaFX tutorial includes all topics of JavaFX library such as Fundamentals, 2D Shapes,
+                            3D
+                            Shapes, Effects, Animation, Text, Layouts, UI Controls, Transformations, Charts, JavaFX with
+                            CSS,
+                            JavaFX with Media etc.
+                        </p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="History_of_JavaFX">
+            <header>
+                <h1>History of JavaFX</h1>
+            </header>
+            <article>
+                <p>JavaFX is a Java library used to develop Desktop applications as well as Rich Internet Applications
+                    (RIA). The applications built in JavaFX, can run on multiple platforms including Web, Mobile and
+                    Desktops.</p>
+                <p>JavaFX is intended to replace swing in Java applications as a GUI framework. However, It provides
+                    more functionalities than swing. Like Swing, JavaFX also provides its own components and doesn't
+                    depend upon the operating system. It is lightweight and hardware accelerated. It supports various
+                    operating systems including Windows, Linux and Mac OS.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Key_features_of_JavaFX">
+            <header>
+                <h1>Key features of JavaFX</h1>
+            </header>
+            <article>
+                <ul>
+                    <li>
+                        <p><span>Java APIs.</span> JavaFX is a Java library that consists of classes and interfaces that
+                            are written
+                            in native Java code. The APIs are designed to be a friendly alternative to Java Virtual
+                            Machine (Java VM) languages, such as JRuby and Scala.</p>
+                    </li>
+                    <li>
+                        <p><span>FXML and Scene Builder</span> FXML is an XML-based declarative markup language for
+                            constructing a
+                            JavaFX application user interface. A designer can code in FXML or use JavaFX Scene Builder
+                            to interactively design the graphical user interface (GUI). Scene Builder generates FXML
+                            markup that can be ported to an IDE where a developer can add the business logic</p>
+                    </li>
+
+                    <li>
+                        <p><span>WebView</span> A web component that uses WebKitHTML technology to make
+                            it possible to embed web pages within a JavaFX application. JavaScript running in WebView
+                            can call Java APIs, and Java APIs can call JavaScript running in WebView.</p>
+                    </li>
+                    <li>
+                        <p><span>Swing interoperability</span> Existing Swing applications can be updated with new
+                            JavaFX features,
+                            such as rich graphics media playback and embedded Web content.</p>
+                    </li>
+                    <li>
+                        <p><span>Built-in UI controls and CSS</span> JavaFX provides all the major UI controls required
+                            to
+                            develop a full-featured application. Components can be skinned with standard Web
+                            technologies such as CSS</p>
+                    </li>
+                    <li>
+                        <p><span>Canvas API </span> JavaFX provides all the major UI controls required to
+                            develop a full-featured application. Components can be skinned with standard Web
+                            technologies such as CSS</p>
+                    </li>
+
+                    <li>
+                        <p><span>Multitouch Support. </span> JavaFX provides support for multitouch operations, based on
+                            the capabilities of the underlying platform.
+                        </p>
+                    </li>
+                    <li>
+                        <p><span>High-performance media engine</span> The media pipeline supports the playback of web
+                            multimedia content. It provides a stable, low-latency media framework that is based on the
+                            GStreamer multimedia framework
+                        </p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Program_Structre">
+            <header>
+                <h1>Program Structre</h1>
+            </header>
+            <article>
+                <ul>
+                    <li>
+                        <p> The main class for a JavaFX application extends the
+                            <code>javafx.application.Application</code> class.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>The <code>start()</code> method is the main entry point for all JavaFX applications. So your
+                            main class
+                            will,override it.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>A JavaFX application defines the user interface container by means of a stage and a scene.
+                            The JavaFX Stage class is the top-level JavaFX container. The JavaFX Scene class is the
+                            container for all content.</p>
+                    </li>
+
+                    <li>
+                        <p>In JavaFX, the content of the scene is represented as a hierarchical scene graph of nodes.
+                        </p>
+                    </li>
+                    <li>
+                        <p>The <code>main()</code> method is not required for JavaFX application, however useful to
+                            launch in IDE
+                            without
+                            JavaFX launcher.</p>
+                    </li>
+                    <li>
+                        <p>The <code>primaryStage.show();</code> is method to show Window of program</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Write_your_first_program">
+            <header>
+                <h1>Write your first program</h1>
+            </header>
+            <article>
+                <ul>
+                    <li>
+                        <p><span>Write Your first application in javafx</span></p>
+                    </li>
+                </ul>
+                <code>
+                    import javafx.application.Application;<br/>
+                    import javafx.scene.Scene;<br/>
+                    import javafx.scene.control.Button;<br/>
+                    import javafx.scene.layout.StackPane;<br/>
+                    import javafx.stage.Stage;<br/>
+                    <br/>
+                    public class Main extends Application {<br/>
+                   &nbsp; public static void main(String[] args) {<br/>
+                    &nbsp;&nbsp; launch(args);<br/>
+                    }<br/>
+
+                    @Override<br/>
+                    public void start(Stage primaryStage) throws Exception {<br/>
+                        &nbsp; primaryStage.setTitle("Welcome to Javapedia.net");<br/>
+                        <br/>
+                        &nbsp;&nbsp; Button b = new Button("Click");<br/>
+                        <br/>
+                        &nbsp;&nbsp; StackPane layout = new StackPane();<br/>
+                        &nbsp;&nbsp;  layout.getChildren().add(b);<br/>
+                        <br/>
+                        &nbsp;&nbsp; Scene scene = new Scene(layout, 300, 300);<br/>
+                        &nbsp;&nbsp;  primaryStage.setScene(scene);<br/>
+                        &nbsp;&nbsp;  primaryStage.show();<br/>
+
+                    }
+                    }<br/>
+                </code>
+            </article>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

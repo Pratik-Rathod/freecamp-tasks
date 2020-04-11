@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>survey Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: whitesmoke;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body::before {
+            content: '';
+            background-attachment: fixed;
+            background-color: darkblue;
+            background-image: linear-gradient(90deg, rgba(18, 194, 233, .7), rgba(197, 114, 238, .7), rgba(246, 79, 89, .7)),
+                url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -10;
+            left: 0;
+        }
+
+        main {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        main div {
+            text-align: center;
+            padding: auto;
+        }
+
+        h1 {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        p {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        #title-container {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        form {
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+            padding: 5px 5% 5px 5%;
+            color: black;
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+            height: auto;
+            width: 60%;
+        }
+
+        label {
+            display: block;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        .input {
+            height: 30px;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .group-control{
+            height: 15px;
+            width: 15px;         
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <main>
+        <div id="title-container">
+            <h1 id="title">Hello Developer !</h1>
+            <p id="description">Thank You for taking time and filling this form.</p>
+        </div>
+        <form id="survey-form">
+            <label id="name-label" for="name">Name</label>
+            <input class="input" name="name" id="name" type="text" required placeholder="Enter you name here !">
+
+            <label id="email-label" for="email">Email</label>
+            <input name="email" class="input" id="email" type="email" required placeholder="abc@example.com">
+
+            <label id="number-label" for="number">Age(Optional)</label>
+            <input name="number" class="input" id="number" type="number" required placeholder="Age" min="16" max="60">
+
+            <label id="">Select Your language</label>
+            <select id="dropdown" class="input" id="dropdown">
+                <option>English</option>
+                <option>Hindi</option>
+                <option>JAVA(LOL)</option>
+            </select>
+            <label for="Theme">Select Your favorite IDE Theme</label>
+            <input type="radio" class="group-control" name="Theme" value="Dark">
+            Dark
+            <br>
+            <input type="radio"class="group-control" name="Theme" value="Light">
+            Light
+            <br>
+            <input type="radio" class="group-control"name="Theme" value="Default">
+            Default
+         <label for="IDE" id="checkbox">Select your fevorite programming language !</label>
+            <input type="checkbox" class="group-control"  value="java" name="language"> JAVA <br/>
+            <input type="checkbox" class="group-control"  value="c++" name="language"> C++ <br/>
+            <input type="checkbox" class="group-control"  value="Python" name="language"> Python <br/>
+            <input type="checkbox" class="group-control"  value="Javacript" name="language"> Javacript <br/>
+            <input type="checkbox" class="group-control"  value="GO" name="language"> GO <br/>
+
+            <label for="describe" id="textarea-lable"></label>
+            <textarea class="input" rows="4" name="describe"></textarea>
+            <input type="submit" id="submit" class="input" value="Thank You">
+        </form>
+    </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>
