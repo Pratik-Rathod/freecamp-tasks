@@ -1,3 +1,3 @@
 # freecamp-tasks
 <h1>freecamporg task code base</h1>
-Codepen.io >><a herf="https://codepen.io/pratik-rathod/" target="_blank">Click here</a>
+I'm an inline-style link with title (https://codepen.io/pratik-rathod/ "codepen.io")
